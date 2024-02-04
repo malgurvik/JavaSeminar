@@ -63,6 +63,10 @@ public class Answer {
         int a = scanner.nextInt();
         System.out.println("Enter operation: ");
         char op = (char) System.in.read();
+        if (op != '+' && op != '-' && op != '*' && op != '/') {
+            System.out.println("Некорректный оператор: " + op);
+            return;
+        }
         System.out.println("Enter num B: ");
         int b = scanner.nextInt();
         System.out.println(calculate(op, a, b));
